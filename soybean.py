@@ -1,3 +1,7 @@
+import pandas as pd
+import numpy as np
+from datetime import datetime
+
 class soybean():
   def __init__(self, interval, product, expiry = False):
     self.interval = interval
