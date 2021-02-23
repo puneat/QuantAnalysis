@@ -9,7 +9,7 @@ class soybean():
     self.expiry = expiry
 
     def load_data(self, name):
-      path = self.interval + '/' + self.product + name + '.csv'
+      path = '/content/QuantAnalysis/'+ self.interval + '/' + self.product + name + '.csv'
       df = pd.read_csv(path)
       df.drop(labels='Unnamed: 0', axis=1,inplace=True)
       df['Timestamp'] = pd.to_datetime(df['Timestamp'], infer_datetime_format= True)
@@ -55,7 +55,7 @@ class soybean():
 
       return df
 
-    if expiry = True:
+    if expiry == True:
       self.c1 = add_expiry(self, self.c1, 'c1')
       self.c2 = add_expiry(self, self.c2, 'c2')
       self.c3 = add_expiry(self, self.c3, 'c3')
